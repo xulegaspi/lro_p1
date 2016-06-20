@@ -1,0 +1,28 @@
+.body {
+    position: absolute;
+    width: 70%;
+    text-align: center;
+    margin-left: 15%;
+}
+
+.title {
+    background-color: lightgray;
+}
+
+.main {
+    background-color: powderblue;
+}
+
+.settings {
+    background-color: blanchedalmond;
+}
+
+.box {
+    display: inline-block;
+    background-color: lightcoral;
+    text-align: center;
+}
+
+.error {
+    color: red;
+}

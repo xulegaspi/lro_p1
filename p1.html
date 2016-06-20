@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <link rel="stylesheet" type="text/css" href="p1.css" media="screen" />
+    <meta charset="UTF-8">
+    <script src="p1.js" type="text/javascript"></script>
+    <title>Practica 1 LRO</title>
+</head>
+<body>
+<div class="body">
+    <div class="title">
+        <h1>Practica 1 LRO</h1>
+    </div>
+    <form id="formId" method="post" enctype="application/x-www-form-urlencoded" action="p1.php" onsubmit="complete(this)">
+
+        <div class="main">
+            <br>
+            <input id="browser" name="browser" type="hidden" value="" />
+            <input id="date" name="date" type="hidden" value="" />
+
+            Username: <input type="text" id="userId" name="username" autocomplete="off" onchange="vUsername(this)">
+            <span id="username_error" class="error"></span>
+            <br>
+            Password: <input type="password" id="passId" name="password" onchange="vPassword(this)">
+            <span id="pass_error" class="error"></span>
+            <br><br>
+
+            Name: <input type="text" id="nameId" name="name" autocomplete="off"> <br>
+            Last name: <input type="text" id="lastnameId" name="lastname" autocomplete="off"> <br>
+            Email: <input type="email" id="emailId" name="email" autocomplete="off"> <br>
+            Gender:
+            Female<input type="radio" id="femaleId" name="gender" checked="checked" value="Female" autocomplete="off">
+            Male<input type="radio" id="maleId" name="gender" value="Male" autocomplete="off"> <br> <br>
+
+            Channel preferences: <br>
+            <div class="box">
+                <input id="animationId" name="animation" type="checkbox" autocomplete="off"/>
+                animation
+                <input id="comedyId" name="comedy" type="checkbox" autocomplete="off"/>
+                comedy
+                <input id="crimeId" name="crime" type="checkbox" autocomplete="off"/>
+                crime
+                <input id="documentaryId" name="documentary" type="checkbox" autocomplete="off"/>
+                documentary
+                <input id="dramaId" name="drama" type="checkbox" autocomplete="off"/>
+                drama
+                <input id="sportsId" name="sports" type="checkbox" autocomplete="off"/>
+                sports
+                <input id="newsId" name="news" type="checkbox" autocomplete="off"/>
+                news
+            </div>
+            <br> <br>
+        </div>
+
+        <div class="settings">
+            Send by:<br />
+            Post:<input id="method_post" name="method" type="radio" checked="checked" onchange="ChangeMethod()" autocomplete="off"/>
+            Get:<input id="method_get" name="method" type="radio" onchange="ChangeMethod()" autocomplete="off"/> <br>
+            Choose encoding:<br />
+            Url-Encoded:<input id="enctype_urlencoded" name="enctype" type="radio" checked="checked" onchange="ChangeEncType()" autocomplete="off"/>
+            Multipart:<input id="enctype_multipart" name="enctype" type="radio" onchange="ChangeEncType()" autocomplete="off"/> <br>
+            Choose server:<br />
+            Student:<input id="action_student" name="action" type="radio" checked="checked" onchange="ChangeAction()" autocomplete="off"/>
+            Teacher:<input id="action_teacher" name="action" type="radio" onchange="ChangeAction()" autocomplete="off"/>
+        </div>
+
+        <input type="submit" id="submitId">
+    </form>
+</div>
+</body>
+</html>
